@@ -1,5 +1,5 @@
-import 'package:arq/data/datasources/get_carros_por_cor_datasource.dart';
-import 'package:arq/data/dtos/carro_dto.dart';
+import 'package:arq/layers/data/datasources/get_carros_por_cor_datasource.dart';
+import 'package:arq/layers/data/dtos/carro_dto.dart';
 
 class GetCarrosPorCorLocalDatasourceImp implements GetCarrosPorCorDatasource {
   final jsonVermelho = {
