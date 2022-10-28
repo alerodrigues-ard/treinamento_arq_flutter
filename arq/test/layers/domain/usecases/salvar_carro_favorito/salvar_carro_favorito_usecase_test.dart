@@ -17,7 +17,7 @@ main() {
     'Deve salvar carro com sucesso',
     () async {
       SalvarCarroFavoritoUseCase useCase =
-          SalvarCarroFavotiroUseCaseImp(SalvarCarroFavoritoRepositopryImp());
+          SalvarCarroFavoritoUseCaseImp(SalvarCarroFavoritoRepositopryImp());
 
       var carroEntity =
           CarroEntity(placa: 'TTT-1234', quantidadePortas: 4, valor: 10000.00);
@@ -31,7 +31,7 @@ main() {
     'Não deve salvar carro com valor menor ou igual a zero',
     () async {
       SalvarCarroFavoritoUseCase useCase =
-          SalvarCarroFavotiroUseCaseImp(SalvarCarroFavoritoRepositopryImp());
+          SalvarCarroFavoritoUseCaseImp(SalvarCarroFavoritoRepositopryImp());
 
       var carroEntity =
           CarroEntity(placa: 'TTT-1234', quantidadePortas: 4, valor: 0.00);
