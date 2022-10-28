@@ -13,8 +13,14 @@ main() {
           GetCarrosPorCorRepositoryImp(GetCarrosPorCorLocalDatasourceImp()));
 
       var result = useCase('azul');
+      late CarroEntity expectResult;
 
-      expect(result, isInstanceOf<CarroEntity>());
+      result.fold(
+        (l) => null,
+        (r) => expectResult = r,
+      );
+
+      expect(expectResult, isInstanceOf<CarroEntity>());
     },
   );
 
@@ -25,8 +31,14 @@ main() {
           GetCarrosPorCorRepositoryImp(GetCarrosPorCorLocalDatasourceImp()));
 
       var result = useCase('vermelho');
+      late CarroEntity expectResult;
 
-      expect(result.quantidadePortas, 4);
+      result.fold(
+        (l) => null,
+        (r) => expectResult = r,
+      );
+
+      expect(expectResult.quantidadePortas, 4);
     },
   );
 
@@ -37,8 +49,14 @@ main() {
           GetCarrosPorCorRepositoryImp(GetCarrosPorCorLocalDatasourceImp()));
 
       var result = useCase('verde');
+      late CarroEntity expectResult;
 
-      expect(result.quantidadePortas, 2);
+      result.fold(
+        (l) => null,
+        (r) => expectResult = r,
+      );
+
+      expect(expectResult.quantidadePortas, 2);
     },
   );
 }

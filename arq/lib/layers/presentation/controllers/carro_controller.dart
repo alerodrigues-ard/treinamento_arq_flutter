@@ -16,7 +16,13 @@ class CarroController {
   }
 
   getCarrosPorCor(String cor) {
-    carro = _getCarrosPorCorUseCase(cor);
+    var result = _getCarrosPorCorUseCase(cor);
+
+    // O fold trabalha com os dois lados do Either
+    result.fold(
+      (error) => print(error.toString()),
+      (success) => carro = success,
+    );
   }
 
   salvarCarroFavorito(CarroEntity carro) async {
